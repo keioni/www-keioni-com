@@ -1,0 +1,32 @@
+{
+    "css.format.preserveNewLines": false,
+    "html.format.wrapLineLength": 0,
+    "html.format.maxPreserveNewLines": 1,
+    "html.format.preserveNewLines": false,
+    "html.format.indentInnerHtml": false,
+    "htmlhint.documentSelector": [
+        "html",
+        "htm",
+        "twig"
+    ],
+    "htmlhint.options": {
+        "tagname-lowercase": true,
+        "attr-lowercase": true,
+        "attr-value-double-quotes": true,
+        "doctype-first": true,
+        "tag-pair": true,
+        "spec-char-escape": true,
+        "id-unique": true,
+        "src-not-empty": true,
+        "attr-no-duplication": true,
+        "title-require": true
+    },
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+    "terminal.integrated.fontWeightBold": "bold",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.drawBoldTextInBrightColors": false,
+    "liveServer.settings.root": "/www",
+    "liveServer.settings.port": 5500,
+    "livePreview.serverRoot": "/www",
+    "webvalidator.validateOnSave": true
+}

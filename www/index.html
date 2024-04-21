@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="双子のロシアンブルーと同居するインフラエンジニア Kei Onimaru のWebサイト。「楽するための苦労はいとわない」がモットー。">
+    <link rel="canonical" href="https://keioni.com/">
+    <link rel="preload" href="/img/connected/via.png" as="image">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <title>Who's Kei Onimaru?</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">Who's Kei Onimaru?</a></h1>
+        <p><a href="/">Kei Onimaru's Information Site.</a></p>
+    </header>
+
+    <main>
+
+        <div id="profile">
+            <p><img id="face" src="/img/profile/face.jpg" alt="My Face (substitute)" width="96" height="96"></p>
+            <p>双子のロシアンブルーと同居するインフラエンジニア。モットーは「楽するための苦労はいとわない」。最適化とか自動化が大好き。IPv6, AWS, サーバレス, Docker, Terraform, CI/CD, セキュリティといった単語に反応するようです。すみっコぐらしとか可愛いものが好き。</p>
+        </div>
+
+        <div id="underconstruction">
+            <p>まだまだ工事中！ これから少しずつ情報を増やしていきます…！</p>
+        </div>
+
+        <article id="contact">
+            <h2>連絡先</h2>
+            <p>お気軽に <span id="electrolize"><a href="mailto:contact@keioni.com">contact@keioni.com</a></span> までご連絡ください。</p>
+        </article>
+
+        <article id="history">
+            <h2>ざっくり経歴紹介</h2>
+            <p>福岡生まれ福岡育ち。地元の大学を卒業後、奈良の大学院でネットワーク工学とボケとツッコミを学ぶ。<br>
+                その後、上京してインターネット関連企業に新卒入社。知見のないデータマイニングのチームに配属され、データ処理のインフラを設計、運用するとともに社内向けに集計データを見せるツールや、独自の分散処理システムを作ったり。<br>
+                それから、巨大なデータ処理プラットフォームのハンドリングを担当。その後、地元福岡に戻り、SIerで何でも屋のSEを1年半経験したあと、ベンチャー企業2社でインフラの構築や運用、最適化、自動化などを担当。</p>
+        </article>
+
+        <article id="documents">
+            <h2>書いたものなど</h2>
+            <p>だいたい4年ぐらい前に書いたものばかりです…</p>
+            <dl>
+                <dt><a href="https://speakerdeck.com/keioni/ipadoresufalseonedan">IPアドレスのおねだん</a></dt>
+                <dd>枯渇しているIPv4アドレスが売買されている現状と、その市場の紹介</dd>
+                <dt><a href="https://qiita.com/keys/items/43adf968d366e80f0003">EC2インスタンス起動時にIPアドレスを自動でRoute53に登録する</a></dt>
+                <dd>AWSで CloudWatch + Lambda + Route53 を使って Elastic IP をケチるテクニック</dd>
+                <dt><a href="https://qiita.com/keys/items/611d949ca26d6ca848c2">HTTP/3対応のcurlを作る</a></dt>
+                <dd>HTTP/3 に対応させた curl の作り方と、私製の Docker イメージの紹介</dd>
+                <dt><a href="https://qiita.com/keys/items/187a9e028b2b9dcbc1c6">SSL証明書でIPアドレスからホスト名が漏れる</a></dt>
+                <dd>バーチャルホストを使っているとき、設定によってIPアドレスからドメイン名が分かってしまう件への対処法</dd>
+                <dt><a href="https://qiita.com/keys/items/0baca41cd8bc6e8a320c">zshで(もっと)ヒストリ検索を使ってみませんか？</a></dt>
+                <dd>ヒストリ検索をうまく使えば作業効率が爆上がりする、という話</dd>
+                <dt><a href="https://qiita.com/keys/items/ba03b71fd34ebbff4c6e">sudoポリス「誰だ！ 本番環境でsudo suしてるのは！」</a></dt>
+                <dd>なぜ <code>sudo su</code> を使うべきでないのか、軽い調子で説明</dd>
+            </dl>
+            <p id="see-other"><a href="https://qiita.com/keys">Qiita</a> に書くことが多い(多かった)ので、よろしければそちらもご覧ください。</p>
+        </article>
+
+    </main>
+
+    <footer>
+        <p><a href="https://qiita.com/keys/items/372bd34b8198c8c64f89"><img src="/img/connected/via.png" height="24" width="144" id="ipaddr-type-image" alt="IP address check image"></a></p>
+        <p id="icon-list">
+            <a href="mailto:contact@keioni.com"><img src="/img/icon/envelope-icon.svg" alt="Icon for E-mail"></a>
+            <a href="https://github.com/keioni"><img src="/img/icon/github-icon.svg" alt="Icon for my GitHub link"></a>
+            <a href="https://bsky.app/profile/keioni.com"><img src="/img/icon/bluesky-icon.svg" alt="Icon for my Bluesky link"></a>
+        </p>
+        <p><span id="copyright">&copy; Kei Onimaru</span><br>
+            文責はすべて筆者にあります。この文書の内容は、所属する組織とは関係ありません。 </p>
+    </footer>
+</body>
+
+</html>

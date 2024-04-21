@@ -1,0 +1,27 @@
+
+#slides p {
+    margin-bottom: 1.5em;
+}
+
+#slides dd {
+    margin-left: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 1.2em;
+}
+
+#slides .pdf-icon {
+    margin-right: 0.25em;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
+#blog p {
+    margin-bottom: 1.5em;
+}
+
+#blog dd {
+    margin-left: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 1.2em;
+}
