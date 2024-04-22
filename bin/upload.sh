@@ -11,7 +11,6 @@ cp -pr bin/ipaddr-logger/* www/cgi-bin/src/
 tar zcvf $tarfile \
     --no-mac-metadata \
     --exclude .DS_Store \
-    --exclude '*.pdf' \
     --exclude '*.log' \
     --exclude '.git*' \
     --exclude '.o' \
