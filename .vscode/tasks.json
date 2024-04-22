@@ -2,18 +2,18 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: clang++ build active file",
+            "label": "ipaddr-logger",
             "command": "/usr/bin/clang++",
             "args": [
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "${file}",
+                "{workspaceFolder}/bin/ipaddr-logger/ipaddr-logger.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "{workspaceFolder}/bin/ipaddr-logger"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}/bin/ipaddr-logger",
             },
             "problemMatcher": [
                 "$gcc"

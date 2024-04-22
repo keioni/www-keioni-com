@@ -1,7 +1,4 @@
-ipaddr-logger: ipaddr-logger.o image-binary-object.o
-	gcc -O3 ipaddr-logger.o image-binary-object.o -o ipaddr-logger
+ipaddr-logger: ipaddr-logger.c ipv4_img_array.h ipv6_img_array.h
+	gcc -O3 -g ipaddr-logger.c -o ipaddr-logger
 	strip ipaddr-logger
 	cp ipaddr-logger ../ipaddr-logger.cgi
-
-ipaddr-logger.o: ipaddr-logger.c
-	gcc -c -O3 ipaddr-logger.c -o ipaddr-logger.c

@@ -1,22 +1,41 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(lldb) Launch",
+            "name": "(lldb) ipaddr-logger",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/binary-to-array",
-            "args": [
-                "-i",
-                "${workspaceFolder}/www/img/connected/via_ipv4.png",
-                "mogmog"
-            ],
+            "program": "${workspaceFolder}/bin/ipaddr-logger/ipaddr-logger",
+            // "preLaunchTask": "ipaddr-logger",
+            "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "DOCUMENT_ROOT",
+                    "value": "."
+                },
+                {
+                    "name": "HTTP_CF_CONNECTING_IP",
+                    "value": "240d:1e:3a5:f900:cf5:e9cb:2300:3c44"
+                },
+                {
+                    "name": "HTTP_CF_RAY",
+                    "value": "5f7b7b7b7b7b7b7b-CDG"
+                },
+                {
+                    "name": "QUERY_STRING",
+                    "value": "HTTP/3"
+                },
+                {
+                    "name": "HTTP_REFERER",
+                    "value": "https://www.google.com/"
+                },
+                {
+                    "name": "HTTP_USER_AGENT",
+                    "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+                }
+            ],
             "externalConsole": false,
             "MIMode": "lldb"
         }

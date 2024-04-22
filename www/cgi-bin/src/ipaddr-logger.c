@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #include "ipv4_img_array.h"
@@ -8,11 +9,6 @@
 #define BUF_SIZE_TIMESTAMP 50
 #define BUF_SIZE_FILE_TIMESTAMP 50
 #define BUF_SIZE_LOG_FILE 100
-
-extern const int ipv4_img_size;
-extern const int ipv6_img_size;
-extern const char *ipv4_img_array;
-extern const char *ipv6_img_array;
 
 
 int ipaddr_version_check(const char *ipaddr)
@@ -32,12 +28,16 @@ int main(int argc, char *argv[])
     const char *http_cf_connecting_ip = getenv("HTTP_CF_CONNECTING_IP");
 
     int ip6addr = ipaddr_version_check(http_cf_connecting_ip);
-    int image_byte_size = ip6addr ? ipv4_img_size : ipv6_img_size;
-
+    if ( ip6addr ) {
+        printf("Content-Type: image/png\nContent-Length: %d\n\n", ipv6_img_size);
+        fwrite(ipv6_img_array, 1, ipv6_img_size, stdout);
+    } else {
+        printf("Content-Type: image/png\nContent-Length: %d\n\n", ipv4_img_size);
+        fwrite(ipv4_img_array, 1, ipv4_img_size, stdout);
+    }
 
     time_t current_time = time(NULL);
     struct tm *current_localtime = localtime(&current_time);
-
 
     char timestamp[BUF_SIZE_TIMESTAMP];
     char file_timestamp[BUF_SIZE_FILE_TIMESTAMP];
@@ -47,7 +47,12 @@ int main(int argc, char *argv[])
     char log_file[BUF_SIZE_LOG_FILE];
     sprintf(log_file, "%s/.system/log/%s.log", getenv("DOCUMENT_ROOT"), file_timestamp);
 
-    FILE *fp_log = fopen(log_file, "a");
+    FILE *fp_log = NULL;
+    if (( fp_log = fopen(log_file, "a+") ) == NULL) {
+        fprintf(stderr, "Error: Failed to open log file.\nFile: %s\n", log_file);
+        return 1;
+    }
+
     fprintf(fp_log, "%s %s %s %s \"%s\" \"%s\"\n",
             timestamp,
             getenv("HTTP_CF_RAY"),
@@ -57,7 +62,4 @@ int main(int argc, char *argv[])
             getenv("HTTP_USER_AGENT")
     );
     fclose(fp_log);
-
-    printf("Content-Type: image/png\nContent-Size: %s\n\n", image_byte_size);
-    puts( ip6addr ? ipv4_img_array : ipv6_img_array );
 }
