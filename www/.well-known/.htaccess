@@ -1,4 +1,0 @@
-<Files "*">
-    FileEtag None
-    Header set Cache-Control no-store
-</Files>
