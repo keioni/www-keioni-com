@@ -3,6 +3,3 @@
 *.log
 
 tmp/
-
-*.o
-*.dSYM/
