@@ -17,7 +17,7 @@
                 },
                 {
                     "name": "HTTP_CF_CONNECTING_IP",
-                    "value": "240d:1e:3a5:f900:cf5:e9cb:2300:3c44"
+                    "value": "2001:db8:37ba:f900:cf5:e9cb:2300:3c44"
                 },
                 {
                     "name": "HTTP_CF_RAY",
