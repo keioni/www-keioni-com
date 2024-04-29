@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     FILE *fp_bin = NULL;
     unsigned char c = 0;
     char *binary_file_name = NULL;
-    char *array_name = NULL;
+    unsigned char *array_name = NULL;
     unsigned long array_size = 0;
     int opt = 0;
 
