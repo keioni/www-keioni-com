@@ -44,8 +44,10 @@ int main(int argc, char *argv[])
     strftime(timestamp, BUF_SIZE_TIMESTAMP, "%Y-%m-%d %H:%M:%S", current_localtime);
     strftime(file_timestamp, BUF_SIZE_FILE_TIMESTAMP, "%Y%m%d", current_localtime);
 
-    char log_file[BUF_SIZE_LOG_FILE];
-    sprintf(log_file, "%s/.system/log/%s.log", getenv("DOCUMENT_ROOT"), file_timestamp);
+    const char *document_root = getenv("DOCUMENT_ROOT");
+    int document_root_len = strlen(document_root);
+    char log_file[BUF_SIZE_LOG_FILE + document_root_len + 1];
+    sprintf(log_file, "%s/.system/log/%s.log", document_root, file_timestamp);
 
     FILE *fp_log = NULL;
     if (( fp_log = fopen(log_file, "a+") ) == NULL) {
