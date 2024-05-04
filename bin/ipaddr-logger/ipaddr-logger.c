@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #include "ipv4_img_array.h"
@@ -28,10 +29,10 @@ int main(int argc, char *argv[])
 
     int ip6addr = ipaddr_version_check(http_cf_connecting_ip);
     if ( ip6addr ) {
-        printf("Content-Type: image/png\nContent-Length: %d\n\n", ipv6_img_size);
+        printf("Content-Type: image/png\nContent-Length: %lu\n\n", ipv6_img_size);
         fwrite(ipv6_img_array, 1, ipv6_img_size, stdout);
     } else {
-        printf("Content-Type: image/png\nContent-Length: %d\n\n", ipv4_img_size);
+        printf("Content-Type: image/png\nContent-Length: %lu\n\n", ipv4_img_size);
         fwrite(ipv4_img_array, 1, ipv4_img_size, stdout);
     }
 
