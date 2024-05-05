@@ -19,7 +19,7 @@ cat $yesterday_log >> $all_log_file
 # ######################################################################
 # 自分自身(おにまる)のアクセスを除いた log
 
-my_ip6addr_prefix=240d:1e:3a5:f900:
+my_ip6addr_prefix=$MY_IP6ADDR_PREFIX
 valuable_log_file=$LOG_DIR/valuable-access.log
 
 echo "==================== $border_timestamp ====================" >> $valuable_log_file
