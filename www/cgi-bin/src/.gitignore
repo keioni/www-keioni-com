@@ -1,0 +1,4 @@
+ipaddr-logger
+
+*.o
+*.dSYM/
