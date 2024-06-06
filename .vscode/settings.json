@@ -28,5 +28,7 @@
     "liveServer.settings.root": "/www",
     "liveServer.settings.port": 5500,
     "livePreview.serverRoot": "/www",
-    "webvalidator.validateOnSave": true
+    "webvalidator.validateOnSave": true,
+    "editor.fontFamily": "'Moralerspace Argon HWNF'",
+    "editor.fontSize": 14
 }
