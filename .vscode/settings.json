@@ -1,9 +1,8 @@
 {
     "css.format.preserveNewLines": false,
-    "html.format.wrapLineLength": 0,
-    "html.format.maxPreserveNewLines": 1,
-    "html.format.preserveNewLines": false,
-    "html.format.indentInnerHtml": false,
+    "editor.fontFamily": "'Moralerspace Argon HWNF'",
+    "editor.fontSize": 14,
+    "html.format.indentInnerHtml": true,
     "htmlhint.documentSelector": [
         "html",
         "htm",
@@ -21,14 +20,9 @@
         "attr-no-duplication": true,
         "title-require": true
     },
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-    "terminal.integrated.fontWeightBold": "bold",
-    "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.drawBoldTextInBrightColors": false,
     "liveServer.settings.root": "/www",
     "liveServer.settings.port": 5500,
     "livePreview.serverRoot": "/www",
-    "webvalidator.validateOnSave": true,
-    "editor.fontFamily": "'Moralerspace Argon HWNF'",
-    "editor.fontSize": 14
+    "terminal.integrated.copyOnSelection": true,
+    "webvalidator.validateOnSave": true
 }
