@@ -6,44 +6,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="双子のロシアンブルーと同居するインフラエンジニア Kei Onimaru のWebサイト。「楽するための苦労はいとわない」がモットー。">
     <link rel="canonical" href="https://keioni.com/">
-    <link rel="preload" href="/img/connected/via.png" as="image">
+    <link rel="preload" href="/image/connected/via.png" as="image">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <title>Who's Kei Onimaru?</title>
 </head>
 
 <body>
     <header>
-        <h1><a href="/">Who's Kei Onimaru?</a></h1>
-        <p><a href="/">Kei Onimaru's Information Site.</a></p>
+        <h1>Who's Kei Onimaru?</h1>
+        <p>Kei Onimaru's Information Site.</p>
     </header>
 
     <main>
 
-        <div id="profile">
-            <p><img id="face" src="/img/profile/face.jpg" alt="My Face (substitute)" width="96" height="96"></p>
+        <div>
+            <p><img id="face" src="/image/profile/face.jpg" alt="My Face (substitute)" width="96" height="96"></p>
             <p>双子のロシアンブルーと同居するインフラエンジニア。モットーは「楽するための苦労はいとわない」。最適化とか自動化が大好き。IPv6, AWS, サーバレス, Docker, Terraform, CI/CD, セキュリティといった単語に反応するようです。すみっコぐらしとか可愛いものが好き。</p>
         </div>
 
-        <div id="underconstruction">
-            <p>まだまだ工事中！ これから少しずつ情報を増やしていきます…！</p>
-        </div>
-
-        <article id="contact">
-            <h2>連絡先</h2>
-            <p>お気軽に <span id="electrolize"><a href="mailto:contact@keioni.com">contact@keioni.com</a></span> までご連絡ください。</p>
-        </article>
-
-        <article id="history">
+        <article>
             <h2>ざっくり経歴紹介</h2>
             <p>福岡生まれ福岡育ち。地元の大学を卒業後、奈良の大学院でネットワーク工学とボケとツッコミを学ぶ。<br>
                 その後、上京してインターネット関連企業に新卒入社。知見のないデータマイニングのチームに配属され、データ処理のインフラを設計、運用するとともに社内向けに集計データを見せるツールや、独自の分散処理システムを作ったり。<br>
                 それから、巨大なデータ処理プラットフォームのハンドリングを担当。その後、地元福岡に戻り、SIerで何でも屋のSEを1年半経験したあと、ベンチャー企業2社でインフラの構築や運用、最適化、自動化などを担当。</p>
         </article>
 
-        <article id="old-documents">
+        <article>
             <h2>4年ほど前に書いたものなど</h2>
             <p>今振り返ると拙いものも多いです…。</p>
             <dl>
@@ -60,10 +48,10 @@
                 <dt><a href="https://qiita.com/keys/items/ba03b71fd34ebbff4c6e">sudoポリス「誰だ！ 本番環境でsudo suしてるのは！」</a></dt>
                 <dd>なぜ <code>sudo su</code> を使うべきでないのか、軽い調子で説明</dd>
             </dl>
-            <p id="see-other"><a href="https://qiita.com/keys">Qiita</a> に書くことが多い(多かった)ので、よろしければそちらもご覧ください。</p>
+            <p><a href="https://qiita.com/keys">Qiita</a> に書くことが多い(多かった)ので、よろしければそちらもご覧ください。</p>
         </article>
 
-        <article id="new-documents">
+        <article>
             <h2>さいきん書き始めたもの</h2>
             <dl>
                 <dt><a href="https://zenn.dev/keioni/articles/8b06158f5d541c">C/C++の実行コードにバイナリを埋め込む</a></dt>
@@ -79,16 +67,18 @@
     </main>
 
     <footer>
-        <p><img src="/img/connected/via.png" height="24" width="144" id="ipaddr-type-image" alt="IP address check image"></p>
-        <p id="icon-list">
-            <a href="mailto:contact@keioni.com"><img src="/img/icon/envelope-icon.svg" alt="Icon for E-mail"></a>
-            <a href="https://github.com/keioni"><img src="/img/icon/github-icon.svg" alt="Icon for my GitHub link"></a>
-            <a href="https://zenn.dev/keioni"><img src="/img/icon/zenn-icon.svg" alt="Icon for my Zenn link"></a>
-            <a href="https://bsky.app/profile/nekofirst.life"><img src="/img/icon/bluesky-icon.svg" alt="Icon for my Bluesky link"></a>
-        </p>
-        <p><span id="copyright">&copy; Kei Onimaru</span><br>
-            文責はすべて筆者にあります。この文書の内容は、所属する組織とは関係ありません。 </p>
+        <div class="ip-version-banner"><img src="/image/connected/via.png" alt="Connected IP version"></div>
+        <ul class="other-site-navigation">
+            <li><a href="mailto:contact@keioni.com"><img src="/image/icon/mail-icon.svg" alt="Icon for E-mail"></a></li>
+            <li><a href="https://github.com/keioni"><img src="/image/icon/github-mark-white.svg" alt="Icon for my GitHub link"></a></li>
+            <li><a href="https://zenn.dev/keioni"><img src="/image/icon/zenn-logo-only.svg" alt="Icon for my Zenn link"></a></li>
+        </ul>
+        <p>&copy; Kei Onimaru<br>
+            この文書の内容は所属する組織とは関係ありません。文責はすべて筆者にあります。</p>
     </footer>
+
+    <script src="/js/color-switch.js" defer></script>
+
 </body>
 
 </html>
