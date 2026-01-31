@@ -170,3 +170,9 @@ footer ul.other-site-navigation img {
 footer p {
     line-height: 1.5em;
 }
+
+@media (max-width: 767px) {
+    main {
+        width: 90%;
+    }
+}
