@@ -169,6 +169,7 @@ footer ul.other-site-navigation img {
 
 footer p {
     line-height: 1.5em;
+    word-break: keep-all;
 }
 
 @media (max-width: 767px) {
